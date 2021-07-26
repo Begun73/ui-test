@@ -1,4 +1,5 @@
 import { FriendsHobby } from "../FriendsHobby";
+import { Modal } from "../Modal";
 import { MyHobby } from "../MyHobby";
 import { FormWrapper, MainWrapper } from "./style";
 
@@ -9,6 +10,7 @@ export const Main = (): JSX.Element => {
         <MyHobby />
         <FriendsHobby />
       </FormWrapper>
+      <Modal />
     </MainWrapper>
   );
 };

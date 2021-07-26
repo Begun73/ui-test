@@ -22,32 +22,36 @@ export const List = observer(({ type }: Props): JSX.Element => {
   );
 
   return (
-    <ListWrapper>
-      {prevlist.map((x: string, key: number) => (
-        <ListItem
-          typeHobby={type}
-          isAdded={store.myHobby.some((k: string) => k === x)}
-          key={key + "_" + type}
-          hobby={x}
-        />
-      ))}
-      {list.length > 0 && (
-        <React.Fragment>
+    <React.Fragment>
+      <ListWrapper>
+        {prevlist.map((x: string, key: number) => (
+          <ListItem
+            typeHobby={type}
+            isAdded={store.myHobby.some((k: string) => k === x)}
+            key={key + "_" + type}
+            index={key}
+            hobby={x}
+          />
+        ))}
+        {list.length > 0 && (
           <Collapse isOpen={isOpen}>
             {list.map((x: string, key: number) => (
               <ListItem
                 typeHobby={type}
                 isAdded={store.myHobby.some((k: string) => k === x)}
                 key={key + "_" + type + "_collapse"}
+                index={key + 2}
                 hobby={x}
               />
             ))}
           </Collapse>
-          <More onClick={() => toggleOpen((prev) => !prev)}>
-            {!isOpen ? "еще " + list.length + " интереса" : "свернуть"}
-          </More>
-        </React.Fragment>
+        )}
+      </ListWrapper>
+      {list.length > 0 && (
+        <More onClick={() => toggleOpen((prev) => !prev)}>
+          {!isOpen ? "еще " + list.length + " интереса" : "свернуть"}
+        </More>
       )}
-    </ListWrapper>
+    </React.Fragment>
   );
 });

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const CategoryWrapper = styled.div``;
+export const CategoryWrapper = styled.div`
+  margin-top: 40px;
+`;
 
 export const CategoryProp = styled.div`
   font-weight: 600;

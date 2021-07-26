@@ -34,7 +34,7 @@ export const MyHobby = observer((props: Props) => {
     <div>
       <Category value="О себе" />
       <Title value="Хобби" />
-      <Hobby type="text" onKeyDown={onkeydown} />
+      <Hobby type="text" onKeyDown={onkeydown} placeholder="Введите текст" />
       {store.error && <ErrorSpan>{store.error}</ErrorSpan>}
       <List type={types.MY} />
     </div>

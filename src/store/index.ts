@@ -6,6 +6,7 @@ export class Store {
   friendsHobby: Array<String> = [];
   error: string = "";
   message: string = "";
+  currentHobby: string = "";
   constructor() {
     makeAutoObservable(this);
   }
@@ -20,6 +21,9 @@ export class Store {
   };
   deleteHobby = (i: number) => {
     this.myHobby.splice(i, 1);
+  };
+  setModal = (hobby: string) => {
+    this.currentHobby = hobby;
   };
 }
 

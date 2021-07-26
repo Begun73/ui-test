@@ -9,6 +9,5 @@ export const MainWrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  width: 900px;
-  margin-top: 50px;
+  width: 722px;
 `;

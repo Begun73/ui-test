@@ -8,4 +8,7 @@ export const ErrorSpan = styled.span`
 
 export const Hobby = styled.input`
   margin-left: 17px;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid #334257;
 `;
