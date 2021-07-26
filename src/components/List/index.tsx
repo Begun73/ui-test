@@ -27,7 +27,9 @@ export const List = observer(({ type }: Props): JSX.Element => {
         {prevlist.map((x: string, key: number) => (
           <ListItem
             typeHobby={type}
-            isAdded={store.myHobby.some((k: string) => k === x)}
+            isAdded={store.myHobby.some(
+              (k: string) => k.toLowerCase() === x.toLowerCase()
+            )}
             key={key + "_" + type}
             index={key}
             hobby={x}
@@ -38,7 +40,9 @@ export const List = observer(({ type }: Props): JSX.Element => {
             {list.map((x: string, key: number) => (
               <ListItem
                 typeHobby={type}
-                isAdded={store.myHobby.some((k: string) => k === x)}
+                isAdded={store.myHobby.some(
+                  (k: string) => k.toLowerCase() === x.toLowerCase()
+                )}
                 key={key + "_" + type + "_collapse"}
                 index={key + 2}
                 hobby={x}
