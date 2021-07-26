@@ -3,9 +3,6 @@ import AddImg from "../../img/add.gif";
 import RemoveImg from "../../img/close.png";
 import okImg from "../../img/ok.png";
 import WarningImg from "../../img/warn.png";
-type isHiddenProp = {
-  isHidden: boolean;
-};
 
 export const Add = styled.div`
   width: 12px;

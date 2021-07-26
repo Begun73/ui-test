@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Category } from "../Category";
 import { Title } from "../Title";
 import { observer } from "mobx-react-lite";
